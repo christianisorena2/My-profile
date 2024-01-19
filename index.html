@@ -7,7 +7,6 @@
   <title>Christian Isorena</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-
     body {
       margin: 0;
       padding: 0;
@@ -44,20 +43,25 @@
       background-color: #6495ed;
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
+   .container {
+	display: flex;
+	justify-content: space-between;
+}
+ .home {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
 
-    .home {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 0 10%;
-    }
+/* Add width property for the .image class and use position: fixed; */
+.image {
+  width: 30%; /* Adjust the width as needed */
+  height: auto;
+  margin-right: 20px; /* Add margin to separate the image from text */
+}
 
     .home-content {
       max-width: 600px;
@@ -78,12 +82,6 @@
       font-size: 16px;
       margin: 20px 0 40px;
     }
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
     .fa {
       padding: 20px;
@@ -99,18 +97,8 @@ img {
       opacity: 0.7;
     }
 
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-
     .fa-linkedin {
       background: #007bb5;
-      color: white;
-    }
-
-    .fa-instagram {
-      background: #125688;
       color: white;
     }
 
@@ -119,14 +107,53 @@ img {
       color: white;
     }
 
-    .home-image img {
-      width: 100%; /* Make the image fill its container */
-      max-width: 300px; /* Set a maximum width if needed */
-      border-radius: 50%; /* Make it a circle if you want */
+    .about,
+    .additional-info,
+    .favorites {
+      width: 80%;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 10px auto;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      position: relative;
     }
 
-    .about,
-    .resume,
+    .about-me-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .about-me-box {
+      width: 100%;
+    }
+
+    .about-me-box h2 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+
+    .favorite-item {
+      display: inline-block;
+      text-align: center;
+      margin: 0 15px;
+    }
+
+    .favorite-item p {
+      color: #fff;
+    }
+
+    .resume {
+      width: 80%;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 10px auto;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      position: relative;
+    }
+
     .contact {
       width: 30%;
       padding: 15px;
@@ -134,6 +161,7 @@ img {
       margin: 10px auto;
       border: 2px solid #fff;
       border-radius: 10px;
+      position: relative;
     }
 
     .about {
@@ -173,24 +201,17 @@ img {
       color: #fff;
     }
 
-    .resume {
-      width: 30%;
-      padding: 15px;
-      box-sizing: border-box;
-      margin: 10px auto;
-      border: 2px solid #fff;
-      border-radius: 10px;
-      position: relative;
-      /* Add the border style */
-      border-style: solid;
-      border-width: 2px; /* You can adjust the border width */
+    .contact-info {
+      margin-top: 20px;
     }
 
-    .resume .skills {
-      border-top: 2px solid #fff;
-      padding-top: 15px;
+    .contact-info p {
+      margin: 10px 0;
     }
 
+    .contact-info i {
+      margin-right: 5px;
+    }
   </style>
 </head>
 
@@ -205,153 +226,149 @@ img {
       <a href="#" onclick="showContact()" class="nav-button">Contact</a>
     </nav>
   </header>
-  </div>
-  </div>
-  </div>
 
   <div class="container">
     <div class="home" id="profile-section">
       <div class="home-content">
+<img src="hs.jpg" alt="Description of the image" class="image">
         <h1>Hi, I'm Christian Isorena</h1>
         <h3>IT Student</h3>
         <p>"Hello, I'm Christian Isorena, a newcomer to the coding world. Join me on this journey as I start learning programming, crafting solutions, and unlocking the secrets of code. Together, let's turn our ideas into reality through the power of coding!"</p>
-        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
         <a href=" https://www.linkedin.com/in/christian-isorena" class="fa fa-linkedin"></a>
-        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         <a href="https://github.com/christianisorena2" class="fa fa-github"></a>
       </div>
-      <div class="home-image">
-      <img src="hs.jpg" alt="Paris" style="width:50%;">
-      </div>
     </div>
- 
+
     <div class="about" id="about-me-section" style="display: none;">
-<h2>About Me</h2>
-<div class="about-me-section">
-<div class="about-me-box text-white">
-<!-- Box 1 for your info -->
-<p>Course: BSIT-MI</p>
-<p>Sports: Basketball</p>
-<p>Address: Amparo Caloocan City</p>
-<p>Gmail: <a href="mailto:christian.isorena0102@gmail.com" style="color: #0000FF;">christian.isorena0102@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/christian-isorena" target="_blank"
+      <h2>About Me</h2>
+      <div class="about-me-section">
+        <div class="about-me-box text-white">
+          <h2>Course: BSIT-MI</h2>
+          <p>Sports: Basketball</p>
+          <p>Address: Amparo Caloocan City</p>
+          <p>Gmail: <a href="mailto:christian.isorena0102@gmail.com" style="color: #0000FF;">christian.isorena0102@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/christian-isorena" target="_blank"
               style="color: #0000FF;">https://www.linkedin.com/in/christian-isorena</a></p>
-<p>GitHub: <a href="https://github.com/christianisorena2" target="_blank"
+          <p>GitHub: <a href="https://github.com/christianisorena2" target="_blank"
               style="color: #0000FF;">https://github.com/christianisorena2</a></p>
-</div>
-<div class="about-me-box text-white">
-<h2 class="text-blue">Additional Info</h2>
-<p>I am Christian Isorena. 20 yrs old, the youngest in my family, I'm currently living with my parents at Amparo
-            Caloocan City. IT student in National University Fairview. Since I was a younger kid, I've always been
+        </div>
+
+        <div class="about-me-box text-white">
+          <h2 class="text-blue">Additional Info</h2>
+          <p>I am Christian Isorena. 20 yrs old, the youngest in my family, I'm currently living with my parents at Amparo
+            Caloocan City. IT student at National University Fairview. Since I was a younger kid, I've always been
             interested in mobile gaming. Maybe because I was born in this era of automation? I was able to play outside as
             well, but mobile gaming has been my favorite past time. Until now, my phone is my playmate. Mobile Legends is
             one of my favorite gaming applications nowadays. I like the sense of thrill and achievement the game is
             giving. Whether I'm defeated or not, the excitement I felt was satisfying.</p>
-</div>
- 
-        <h2 class="text-blue">Favorite Anime, Movies, Games, Social Media</h2>
-<div class="favorite-item">
-  <p>Naruto</p>
-  <img src="na.jpg" alt="Anime" width="100">
-</div>
-<div class="favorite-item">
-  <p>One piece</p>
-  <img src="lu.jpg" alt="Anime" width="100">
-</div>
-<div class="favorite-item">
-  <p>Meg 2</p>
-  <img src="meg.jpg" alt="Movie" width="100">
-</div>
-<div class="favorite-item">
-  <p>Godzilla King of the Monsters</p>
-  <img src="gd.jpg" alt="Movie" width="100">
-</div>
-<div class="favorite-item">
-  <p>Black Adam</p>
-  <img src="ad.jpg" alt="Movie" width="100">
-</div>
-<div class="favorite-item">
-  <p>Mobile Legend</p>
-  <img src="ml.jpg" alt="Game" width="100">
-</div>
-<div class="favorite-item">
-  <p>Call of Duty</p>
-  <img src="du.jpg" alt="Game" width="100">
-</div>
-<div class="favorite-item">
-  <p>Facebook</p>
-  <img src="fa.png" alt="Social Media" width="100">
-</div>
-<div class="favorite-item">
-  <p>Tiktok</p>
-  <img src="ti.png" alt="Social Media" width="100">
-</div>
-<div class="favorite-item">
-  <p>Youtube</p>
-  <img src="yo.png" alt="Social Media" width="100">
-</div>
-</div>
-</div>
-</div>
- 
-<div class="resume" id="resume-section" style="display: none;">
-  <h2>Resume</h2>
-  <div class="resume-image">
-    <!-- Add your image source and alt text -->
-    <picture>
-      <source media="(min-width: 768px)" srcset="hs.jpg">
-      <source media="(min-width: 480px)" srcset="resume-medium.jpg">
-      <img src="resume-small.jpg" alt="Resume Image">
-    </picture>
-  </div>
-  <p> As a diligent and dedicated individual, I successfully completed my primary education at Amparo Elementary School, transitioning to Amparo High School where I graduated with honors in Senior High. Currently, I am pursuing my passion for technology as an IT student at National University Fairview, eager to further develop my skills and contribute to the ever-evolving field of information technology.</p>
-  
-  <div class="education">
-    <h3>EDUCATION</h3>
-    <ul>
-      <li>Amparo Elementary School</li>
-      <li>Amparo High School</li>
-      <li>Amparo Senior High School</li>
-      <li>National University Fairview</li>
-    </ul>
-  </div>
-  
-  <div class="skills">
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML - 40%</li>
-      <li>Java - 20%</li>
-      <li>Python - 30%</li>
-      <li>SQL - 20%</li>
-    </ul>
-  </div>
+        </div>
 
-  <div class="languages">
-    <h3>LANGUAGES</h3>
-    <ul>
-      <li>Filipino</li>
-      <li>English</li>
-    </ul>
-  </div>
+        <div class="about-me-box text-white">
+          <h2 class="text-blue">Favorite Anime, Movies, Games, Social Media</h2>
+          <div class="favorite-item">
+            <p>Naruto</p>
+            <img src="na.jpg" alt="Anime" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>One piece</p>
+            <img src="lu.jpg" alt="Anime" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Meg 2</p>
+            <img src="meg.jpg" alt="Movie" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Godzilla King of the Monsters</p>
+            <img src="gd.jpg" alt="Movie" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Black Adam</p>
+            <img src="ad.jpg" alt="Movie" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Mobile Legend</p>
+            <img src="ml.jpg" alt="Game" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Call of Duty</p>
+            <img src="du.jpg" alt="Game" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Facebook</p>
+            <img src="fa.png" alt="Social Media" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Tiktok</p>
+            <img src="ti.png" alt="Social Media" width="100">
+          </div>
+          <div class="favorite-item">
+            <p>Youtube</p>
+            <img src="yo.png" alt="Social Media" width="100">
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="technical-skills">
-    <h3>TECHNICAL SKILLS</h3>
-    <p>Graphics canva/figma</p>
-    <!-- Download link for the resume -->
-<div class="download-resume">
-  <a href="resume.pdf" download="Christian_Isorena_Resume.pdf">Download Resume</a>
-</div>
+   <div class="resume" id="resume-section" style="display: none;">
+          <h2>Resume</h2>
+          <div class="resume-image">
+            <picture>
+              <source media="(min-width: 200px)" srcset="kk.jpg">
+            <source media="(min-width: 480px)" srcset="resume-medium.jpg">
+              <img src="resume-small.jpg" alt="Resume Image">
+            </picture>
+          </div>
+          <p> As a diligent and dedicated individual, I successfully completed my primary education at Amparo Elementary School, transitioning to Amparo High School where I graduated with honors in Senior High. Currently, I am pursuing my passion for technology as an IT student at National University Fairview, eager to further develop my skills and contribute to the ever-evolving field of information technology.</p>
 
-</div>
-</div>
- 
-<div class="contact" id="contact-section" style="display: none;">
-  <h2>Contact</h2>
-  <div class="contact-info">
-    <p><i class="fas fa-phone"></i> 09396311163</p>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:christian.isorena02@gmail.com" style="color: #0000FF;">christian.isorena02@gmail.com</a></p>
-    <p><i class="fas fa-map-marker-alt"></i> Amparo Subd., Caloocan City</p>
-  </div>
+          <div class="education">
+            <h3>EDUCATION</h3>
+            <ul>
+              <li>Amparo Elementary School</li>
+              <li>Amparo High School</li>
+              <li>Amparo Senior High School</li>
+              <li>National University Fairview</li>
+            </ul>
+          </div>
+
+          <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+              <li>HTML - 40%</li>
+              <li>Java - 20%</li>
+              <li>Python - 30%</li>
+              <li>SQL - 20%</li>
+            </ul>
+          </div>
+
+          <div class="languages">
+            <h3>LANGUAGES</h3>
+            <ul>
+              <li>Filipino</li>
+              <li>English</li>
+            </ul>
+          </div>
+
+          <div class="technical-skills">
+            <h3>TECHNICAL SKILLS</h3>
+            <p>Graphics canva/figma</p>
+            <div class="resume-content">
+              <p>Click <a href="isorena.pdf" download="Christian_Isorena_Resume.pdf">here</a>to download my resume</p>
+            </div>
+          </div>
+        </div>
+
+     
+
+    <div class="contact" id="contact-section" style="display: none;">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-phone"></i> 09396311163</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:christian.isorena02@gmail.com" style="color: #0000FF;">christian.isorena02@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Amparo Subd., Caloocan City</p>
+        <p><i class="fas fa-code"></i> GitHub: <a href="https://github.com/christianisorena2" target="_blank" style="color: #0000FF;">christianisorena2</a></p>
+      </div>
+    </div>
+
 </div>
  
   <script>
