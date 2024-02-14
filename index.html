@@ -149,6 +149,11 @@
       position: relative;
     }
 
+    .resume-image img {
+      max-width: 100%; /* Add this property to make the image responsive */
+      height: auto;
+    }
+
     @media only screen and (min-width: 768px) {
       .about-me-box {
         width: calc(33.33% - 20px);
@@ -247,52 +252,49 @@
       </div>
     </div>
 
-  <div class="resume" id="resume-section" style="display: none;">
-  <h2>Resume</h2>
-  <div class="resume-image">
-    <img src="resume-small.jpg" alt="Resume Image">
-  </div>
-          </div>
-          <p> As a diligent and dedicated individual, I successfully completed my primary education at Amparo Elementary School, transitioning to Amparo High School where I graduated with honors in Senior High. Currently, I am pursuing my passion for technology as an IT student at National University Fairview, eager to further develop my skills and contribute to the ever-evolving field of information technology.</p>
+    <div class="resume" id="resume-section" style="display: none;">
+      <h2>Resume</h2>
+      <div class="resume-image">
+        <img src="resume-small.jpg" alt="Resume Image">
+      </div>
+      <p> As a diligent and dedicated individual, I successfully completed my primary education at Amparo Elementary School, transitioning to Amparo High School where I graduated with honors in Senior High. Currently, I am pursuing my passion for technology as an IT student at National University Fairview, eager to further develop my skills and contribute to the ever-evolving field of information technology.</p>
 
-          <div class="education">
-            <h3>EDUCATION</h3>
-            <ul>
-              <li>Amparo Elementary School</li>
-              <li>Amparo High School</li>
-              <li>Amparo Senior High School</li>
-              <li>National University Fairview</li>
-            </ul>
-          </div>
+      <div class="education">
+        <h3>EDUCATION</h3>
+        <ul>
+          <li>Amparo Elementary School</li>
+          <li>Amparo High School</li>
+          <li>Amparo Senior High School</li>
+          <li>National University Fairview</li>
+        </ul>
+      </div>
 
-          <div class="skills">
-            <h3>Skills</h3>
-            <ul>
-              <li>HTML - 40%</li>
-              <li>Java - 20%</li>
-              <li>Python - 30%</li>
-              <li>SQL - 20%</li>
-            </ul>
-          </div>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML - 40%</li>
+          <li>Java - 20%</li>
+          <li>Python - 30%</li>
+          <li>SQL - 20%</li>
+        </ul>
+      </div>
 
-          <div class="languages">
-            <h3>LANGUAGES</h3>
-            <ul>
-              <li>Filipino</li>
-              <li>English</li>
-            </ul>
-          </div>
+      <div class="languages">
+        <h3>LANGUAGES</h3>
+        <ul>
+          <li>Filipino</li>
+          <li>English</li>
+        </ul>
+      </div>
 
-          <div class="technical-skills">
-            <h3>TECHNICAL SKILLS</h3>
-            <p>Graphics canva/figma</p>
-            <div class="resume-content">
-              <p>Click <a href="isorena.pdf" download="Christian_Isorena_Resume.pdf">here</a>to download my resume</p>
-            </div>
-          </div>
+      <div class="technical-skills">
+        <h3>TECHNICAL SKILLS</h3>
+        <p>Graphics canva/figma</p>
+        <div class="resume-content">
+          <p>Click <a href="isorena.pdf" download="Christian_Isorena_Resume.pdf">here</a> to download my resume</p>
         </div>
-
-     
+      </div>
+    </div>
 
     <div class="contact" id="contact-section" style="display: none;">
       <h2>Contact</h2>
@@ -304,38 +306,36 @@
       </div>
     </div>
 
-</div>
- 
-  <script>
-    function showProfile() {
-      document.getElementById('profile-section').style.display = 'block';
-      document.getElementById('about-me-section').style.display = 'none';
-      document.getElementById('resume-section').style.display = 'none';
-      document.getElementById('contact-section').style.display = 'none';
-    }
- 
-    function showAbout() {
-      document.getElementById('profile-section').style.display = 'none';
-      document.getElementById('about-me-section').style.display = 'block';
-      document.getElementById('resume-section').style.display = 'none';
-      document.getElementById('contact-section').style.display = 'none';
-    }
- 
-    function showResume() {
-      document.getElementById('profile-section').style.display = 'none';
-      document.getElementById('about-me-section').style.display = 'none';
-      document.getElementById('resume-section').style.display = 'block';
-      document.getElementById('contact-section').style.display = 'none';
-    }
- 
-    function showContact() {
-      document.getElementById('profile-section').style.display = 'none';
-      document.getElementById('about-me-section').style.display = 'none';
-      document.getElementById('resume-section').style.display = 'none';
-      document.getElementById('contact-section').style.display = 'block';
-    }
-</script>
- 
+    <script>
+      function showProfile() {
+        document.getElementById('profile-section').style.display = 'block';
+        document.getElementById('about-me-section').style.display = 'none';
+        document.getElementById('resume-section').style.display = 'none';
+        document.getElementById('contact-section').style.display = 'none';
+      }
+
+      function showAbout() {
+        document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('about-me-section').style.display = 'block';
+        document.getElementById('resume-section').style.display = 'none';
+        document.getElementById('contact-section').style.display = 'none';
+      }
+
+      function showResume() {
+        document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('about-me-section').style.display = 'none';
+        document.getElementById('resume-section').style.display = 'block';
+        document.getElementById('contact-section').style.display = 'none';
+      }
+
+      function showContact() {
+        document.getElementById('profile-section').style.display = 'none';
+        document.getElementById('about-me-section').style.display = 'none';
+        document.getElementById('resume-section').style.display = 'none';
+        document.getElementById('contact-section').style.display = 'block';
+      }
+    </script>
+
 </body>
- 
+
 </html>
